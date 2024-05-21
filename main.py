@@ -16,12 +16,12 @@ def count_words(book):
     return len(words)
 
 def count_letters(book):
-    lower_case_book = book.lower()
     char_count = {}
-    for c in lower_case_book:
-        if c in char_count:
-            char_count[c] += 1 
+    for c in book:
+        lc = c.lower()
+        if lc in char_count:
+            char_count[lc] += 1 
         else:
-            char_count[c] = 1
+            char_count[lc] = 1
     return char_count
 main()
